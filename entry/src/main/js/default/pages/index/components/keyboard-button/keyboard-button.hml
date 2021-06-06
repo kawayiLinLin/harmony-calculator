@@ -1,0 +1,14 @@
+<div>
+    <button @click="onButtonClick" type="circle" class="other" if="{{ type === typeDict.other }}">
+        {{ text }}
+    </button>
+    <button @click="onButtonClick" type="circle" class="number" elif="{{ type === typeDict.number }}">
+        {{ text }}
+    </button>
+    <button @click="onButtonClick" type="circle" class="operator" elif="{{ type === typeDict.operator }}">
+        {{ text }}
+    </button>
+    <button @click="onButtonClick" class="confirm" elif="{{ type === typeDict.confirm }}">
+        {{ text }}
+    </button>
+</div>

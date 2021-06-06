@@ -1,0 +1,45 @@
+<element src="./components/keyboard-button/keyboard-button.hml" name="keyboard-button">
+</element>
+<div class="container">
+
+<!-- top tool bar  -->
+    <div class="top-tool-bar">
+        <image class="toolbar-more" src="{{ images_resource.more }}" @click="handleMore"></image>
+    </div>
+
+<!-- body  -->
+    <div class="result">
+        <input class="expression-input" value="{{ input }}"></input>
+        <input class="result-input" value="3"></input>
+    </div>
+    <div class="keyboard">
+        <block for="{{ (index, row) in keyboardItemsNormal }}">
+            <div tid="{{ index }}" class="keyboard-row">
+                <block for="{{ (rowIndex, item) in row }}">
+                    <div tid="item.id" class="keyboard-item">
+                        <keyboard-button @click="handleClick" type="{{ item.type }}" text="{{ item.keyName }}" type-dict="{{ typeDict }}">
+                        </keyboard-button>
+                    </div>
+                </block>
+            </div>
+        </block>
+        <div class="keyboard-row-last">
+            <div class="keyboard-row-last-left">
+                <block for="{{ (index, row) in keyboardItemsLastTwoLine }}">
+                    <div tid="{{ index }}" class="keyboard-row">
+                        <block for="{{ (rowIndex, item) in row }}">
+                            <div tid="item.id" class="keyboard-item" style="width: 200px;">
+                                <keyboard-button @click="handleClick" type="{{ item.type }}" text="{{ item.keyName }}" type-dict="{{ typeDict }}">
+                                </keyboard-button>
+                            </div>
+                        </block>
+                    </div>
+                </block>
+            </div>
+            <div class="keyboard-row-last-right">
+                <keyboard-button @click="handleClick" type="{{ keyboardItemConfirm.type }}" text="{{ keyboardItemConfirm.keyName }}" type-dict="{{ typeDict }}">
+                </keyboard-button>
+            </div>
+        </div>
+    </div>
+</div>

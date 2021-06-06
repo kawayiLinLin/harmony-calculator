@@ -1,0 +1,26 @@
+button {
+    height: 65px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.other {
+    font-weight: normal;
+    font-size: 18px;
+    text-color: #333333;
+    background-color: #ffffff;
+}
+
+.operator {
+    text-color: rgb(59, 110, 209);
+    background-color: #fff;
+    font-size: 30px;
+}
+
+.confirm {
+    height: 170px;
+    width: 60px;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}

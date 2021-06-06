@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(233, 236, 241);
+}
+
+.top-tool-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.toolbar-more {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    opacity: 0.9;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+}
+
+.result input {
+    background-color: transparent;
+}
+
+.result .expression-input {
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.keyboard {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.keyboard .keyboard-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 100px;
+}
+
+.keyboard .keyboard-row .keyboard-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+
+.keyboard-row-last {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.keyboard-row-last .keyboard-row-last-left {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+}
+
+.keyboard-row-last .keyboard-row {
+    max-height: 100px;
+}
